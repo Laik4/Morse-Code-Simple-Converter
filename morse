@@ -80,7 +80,9 @@ def decode(encoded):
 if __name__ == '__main__':
     args = sys.argv
 
-    if re.match(r'\-\w', args[-1]):
+    if len(args) == 1:
+        s = input()
+    elif re.match(r'\-\w', args[-1]):
         s = input()
     else:
         s = args[-1].upper()
