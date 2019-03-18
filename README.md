@@ -3,7 +3,7 @@
 
 ## 使用方法
 
-morse [-d] ...
+morse [-d] filename
 
 -d,  復号
 
@@ -26,11 +26,8 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890,.?/-()
 
 ## 例
 
-`morse SOS`
+`echo SOS | morse`
 -> `... --- ...`
 
-`morse -d '... --- ...'`
+`echo '... --- ...' | morse -d`
 -> `SOS`
-
-`morse 'morsecode' | morse -d`
--> `MORSECODE`
