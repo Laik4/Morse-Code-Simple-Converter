@@ -50,7 +50,6 @@ morse = [
 ]
 
 def encode(message):
-
     morsecode = dict(zip(alp, morse))
     available_e = set(alp)
     encoded = ''
@@ -80,12 +79,18 @@ def decode(encoded):
 if __name__ == '__main__':
     args = sys.argv
 
+
     if len(args) == 1:
+        # pipe
         s = input()
     elif re.match(r'\-\w', args[-1]):
+        # pipe
         s = input()
     else:
-        s = args[-1]
+        # fileopen
+        f = open(args[-1], 'r')
+        s = f.read()
+        f.close()
 
     s = s.upper()
 
