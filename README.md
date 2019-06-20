@@ -3,10 +3,10 @@
 
 ## 使用方法
 
-morse [-d] filename
+morse [-h][-d] [infile]
 
--d,  復号
-
+  -h, --help    ヘルプ
+  -d, --decode  復号
 
 |モールス符号|表記|
 |:-:|:-:|
